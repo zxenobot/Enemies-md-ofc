@@ -2,15 +2,15 @@
   
 ### `—◉ 💥 ATTIVA SU KOYEB 💥`
 
-[![Attiva su Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/machecazzoneso/enemies-md&branch=master&name=mysticbot)
+[![Attiva su Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/unlimited787/Enemies-md-ofc&branch=master&name=mysticbot)
   
 ### `—◉ 🌌 ATTIVA SU REPLIT 🌌`
 
-[![Attiva su Repl.it](https://repl.it/badge/github/machecazzoneso/enemies-md)](https://repl.it/github/machecazzoneso/enemies-md)  
+[![Attiva su Repl.it](https://repl.it/badge/github/unlimited787/Enemies-md-ofc)](https://repl.it/github/unlimited787/Enemies-md-ofc)  
 
 ### `—◉ ⚙️ CONFIGURAZIONE ⚙️`
-- CLONARE LA REPOSITORY [qui](https://github.com/machecazzoneso/enemies-md/fork)
-- CAMBIARE NUMERO DEL PROPRIETARIO [qui](https://github.com/machecazzoneso/enemies-md/blob/master/config.js)
+- CLONARE LA REPOSITORY [qui](https://github.com/unlimited787/Enemies-md-ofc/fork)
+- CAMBIARE NUMERO DEL PROPRIETARIO [qui](https://github.com/unlimited787/Enemies-md-ofc/blob/master/config.js)
 
 ### `—◉ 👾 ATTIVA IN TERMUX 👾` 
 - DIGITA QUESTI COMANDI:
@@ -27,7 +27,7 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/machecazzoneso/enemies-md && cd enemies-md
+git clone https://github.com/unlimited787/Enemies-md-ofc && cd Enemies-md-ofc
 ```
 
 ```bash
@@ -54,7 +54,7 @@ sh start.sh
 ```bash
 DIGITA QUESTI COMANDI:
 > cd 
-> cd enemies-md
+> cd Enemies-md-ofc
 > sh start.sh
 ```
 
@@ -62,7 +62,7 @@ DIGITA QUESTI COMANDI:
 ```bash
 DIGITA QUESTI COMANDI:
 > cd 
-> cd enemies-md
+> cd Enemies-md-ofc
 > rm -rf MysticSession
 > sh start.sh
 ```
