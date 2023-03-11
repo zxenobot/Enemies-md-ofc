@@ -39,6 +39,10 @@ npm install
 ```
 
 ```bash
+npm update
+```
+
+```bash
 sh start.sh
 ```
 
