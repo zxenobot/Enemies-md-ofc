@@ -37,7 +37,7 @@ global.timestamp = { start: new Date }
 const __dirname = global.__dirname(import.meta.url)
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-global.prefix = new RegExp('^[' + (opts['prefix'] || '.\\.#').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\.') + ']')
+global.prefix = new RegExp('^[' + (opts['prefix'] || '.\\#').replace(/[|\\{}()[\]^$+*?\-\^]/g, '\\.') + ']')
 
 global.db = new Low(/https?:\/\//.test(opts['db'] || '') ? new cloudDBAdapter(opts['db']) : new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`))
 
@@ -173,14 +173,14 @@ conn.ev.off('connection.update', conn.connectionUpdate)
 conn.ev.off('creds.update', conn.credsUpdate)
 }
   
-conn.welcome = '@user benvenuto/a in @subject'
-conn.bye = '@user se ne va'
-conn.spromote = '@user è ora admin'
-conn.sdemote = '@user non è più admin'
-conn.sDesc = 'descrizione modificata in: @desc'
-conn.sSubject = 'nome modificato in: @subject'
-conn.sIcon = 'immagine gruppo modificata'
-conn.sRevoke = 'link reimpostato, nuovo link: @revoke'
+conn.welcome = '@user 𝐛𝐞𝐧𝐯𝐞𝐧𝐮𝐭𝐨/𝐚 𝐢𝐧 @subject'
+conn.bye = '@user 𝐬𝐞 𝐧𝐞 𝐯𝐚'
+conn.spromote = '@user 𝐞̀ 𝐨𝐫𝐚 𝐚𝐝𝐦𝐢𝐧'
+conn.sdemote = '@user 𝐧𝐨𝐧 𝐞̀ 𝐩𝐢𝐮̀ 𝐚𝐝𝐦𝐢𝐧'
+conn.sDesc = '𝐝𝐞𝐬𝐜𝐫𝐢𝐳𝐢𝐨𝐧𝐞 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐚 𝐢𝐧: @desc'
+conn.sSubject = '𝐧𝐨𝐦𝐞 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐨 𝐢𝐧: @subject'
+conn.sIcon = '𝐢𝐦𝐦𝐚𝐠𝐢𝐧𝐞 𝐠𝐫𝐮𝐩𝐩𝐨 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐚'
+conn.sRevoke = '𝐥𝐢𝐧𝐤 𝐫𝐞𝐢𝐦𝐩𝐨𝐬𝐭𝐚𝐭𝐨, 𝐧𝐮𝐨𝐯𝐨 𝐥𝐢𝐧𝐤: @revoke'
 
 conn.handler = handler.handler.bind(global.conn)
 conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)

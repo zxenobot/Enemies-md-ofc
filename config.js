@@ -423,7 +423,7 @@ global.mes = d.toLocaleDateString('es', { month: 'long' })
 global.año = d.toLocaleDateString('es', { year: 'numeric' })
 global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
 //*****************************
-global.wm2 = `𝐄ИΞM𝕀Ξ𝐒 𝐁Ꮻ𝐓`
+global.wm2 = `𝐄ИΞM𝕀Ξ𝐒 🛡️⃟🏴‍☠️ 𝐁Ꮻ𝐓`
 global.gt = '𝐁Ꮻ𝐓'
 global.mysticbot = '𝐁Ꮻ𝐓'
 global.md = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'

@@ -109,6 +109,8 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.babihutan)) user.babihutan = 0
                 if (!isNumber(user.babipanggang)) user.babipanggang = 0
                 if (!isNumber(user.bandage)) user.bandage = 0
+if (!isNumber(user.antispam)) user.antispam = 0
+              if (!isNumber(user.antispamlastclaim)) user.antispamlastclaim = 0
                 if (!isNumber(user.bank)) user.bank = 0
                 if (!isNumber(user.banteng)) user.banteng = 0
                 if (!isNumber(user.batu)) user.batu = 0
@@ -530,6 +532,8 @@ export async function handler(chatUpdate) {
                     bibitmangga: 0,
                     bibitpisang: 0,
                     botol: 0,
+ antispam: 0,
+                    antispamlastclaim: 0,
                     bow: 0,
                     bowdurability: 0,
                     boxs: 0,
@@ -889,6 +893,7 @@ export async function handler(chatUpdate) {
                 if (!('autosticker' in chat)) chat.autosticker = false                    
                 if (!('audios' in chat)) chat.audios = false                            
                 if (!('antiLink' in chat)) chat.antiLink = true
+if (!('antiSpam' in chat)) chat.antiSpam = false
                 if (!('antiLink2' in chat)) chat.antiLink2 = false
                 if (!('antiviewonce' in chat)) chat.antiviewonce = false
                 if (!('antiToxic' in chat)) chat.antiToxic = false
@@ -910,6 +915,7 @@ export async function handler(chatUpdate) {
                     autosticker: false,
                     audios: false,
                     antiLink: true,
+antiSpam: false,
                     antiLink2: false,
                     antiviewonce: false,
                     antiToxic: false,
@@ -922,16 +928,16 @@ export async function handler(chatUpdate) {
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
                 if (!('self' in settings)) settings.self = false
-                if (!('autoread' in settings)) settings.autoread = true
+                if (!('autoread' in settings)) settings.autoread = false
                 if (!('restrict' in settings)) settings.restrict = true
-                if (!('antiCall' in settings)) settings.antiCall = false
+                if (!('antiCall' in settings)) settings.antiCall = true
                 if (!('antiPrivate' in settings)) settings.antiPrivate = true
 	        if (!('modejadibot' in settings)) settings.modejadibot = true   
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
-                autoread: true,
+                autoread: false,
                 restrict: true,
-                antiCall: false,
+                antiCall: true,
                 antiPrivate: true,
 	        modejadibot: true,
             }
