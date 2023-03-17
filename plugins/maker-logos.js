@@ -12,7 +12,7 @@ if (typeof res == 'number') throw res == -1 ? `effetto non trovato` : `𝐔𝐒�
 let result = await axios.get(res, {
 responseType: 'arraybuffer'
 })
-await conn.sendFile(m.chat, result.data, 'Error.jpg')
+await conn.sendFile(m.chat, result.data, 'Error.jpg', null, m)
 }
 handler.help = ['logos']
 handler.tags = ['nulis']
