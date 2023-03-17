@@ -1,6 +1,7 @@
+
 let handler = m => m
-handler.all = async function (m) {
-  
+handler.before = async function (m, {conn, isAdmin, isBotAdmin, isOwner, isROwner} ) {  
+if (!m.isGroup) return !1
 let chat = global.db.data.chats[m.chat]
 let delet = m.key.participant
 let bang = m.key.id
@@ -30,6 +31,7 @@ let texto = `𝐒𝐏𝐀𝐌 𝐑𝐈𝐋𝐄𝐕𝐀𝐓𝐎 ⛔`
 
 if (!chat.antiSpam) return
 if (new Date - user.antispam < tiempo * 1) return
+if (isBotAdmin && chat.antiSpam && !isAdmin && !isOwner && !isROwner && bot.restrict) {
 await conn.reply(m.chat, texto,  m, { mentions: this.parseMention(texto) })
 user.banned = true
   
@@ -39,7 +41,7 @@ user.antispam = new Date * 1
 } else {
 this.spam[m.sender].spam = 0
 this.spam[m.sender].lastspam = new Date * 1
-}}
+}}}
   
 } catch (e) {
 console.log(e)
