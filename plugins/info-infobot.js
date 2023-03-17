@@ -16,15 +16,15 @@ const { restrict } = global.db.data.settings[conn.user.jid] || {}
 const { autoread } = global.opts
 let old = performance.now()
 let neww = performance.now()
-let speed = neww - old
+let speed = (neww - old).toFixed(5)
 let info = `
-▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀
+🛡️⃟🏴‍☠️ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠️
 
-🛡️⃟🏴‍☠️ 𝐏𝕀И𝐆 🛡️⃟🏴‍☠️
-Attivo da: ${uptime}
-Velocità: ${speed} millisecondi
+𝐏𝐈𝐍𝐆 🛡️⃟🏴‍☠️ 𝐁Ꮻ𝐓
+𝐀𝐓𝐓𝐈𝐕𝐈𝐓𝐀': ${uptime}
+𝐕𝐄𝐋𝐎𝐂𝐈𝐓𝐀': ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢
 
-▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀
+🛡️⃟🏴‍☠️ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠️
 `.trim() 
 conn.reply(m.chat, info, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 

@@ -94,6 +94,22 @@ throw false
 }}
 chat.antiLink = isEnable
 break
+case 'autosticker':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.autosticker = isEnable
+break
+case 'antispam':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.antiSpam = isEnable
+break
 case 'antilinkhttps':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -205,7 +221,7 @@ default:
 if (!/[01]/.test(command)) return 
 throw false
 }
-conn.sendButton(m.chat, `${type} ${isEnable ? 'attivato' : 'disattivato'} con successo`, wm2, null, [[`${isEnable ? 'disattiva' : 'attiva'}`, `${isEnable ? `.0 ${type}` : `.1 ${type}`}`]], m)}
+conn.sendButton(m.chat, `${type} ${isEnable ? '✓ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}`, wm2, null, [[`${isEnable ? '𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚' : '𝐚𝐭𝐭𝐢𝐯𝐚'}`, `${isEnable ? `.0 ${type}` : `.1 ${type}`}`]], m)}
 handler.help = ['attiva', 'disabilita'].map(v => v + '<option>')
 handler.tags = ['group', 'owner']
 handler.command = /^((attiva|disabilita)|(turn)?[01])$/i

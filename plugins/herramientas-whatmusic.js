@@ -28,7 +28,7 @@ Musica trovata
 `.trim()
 fs.unlinkSync(`./tmp/${m.sender}.${ext}`)
 m.reply(txt)
-} else throw 'rispondi a un audio'
+} else return
 }
 handler.command = /^quemusica|quemusicaes|whatmusic$/i
 export default handler

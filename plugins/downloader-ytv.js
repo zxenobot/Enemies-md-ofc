@@ -1,8 +1,8 @@
 import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
-if (!args[0]) throw 'riprova'
-await m.reply(`quasi pronto...`)
+if (!args[0]) return
+await m.reply(`. . .`)
 try {
 let qu = args[1] || '360'
 let q = qu + 'p'
@@ -22,7 +22,7 @@ let n3 = lolh.result.size
 let n4 = lolh.result.thumbnail
 await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `Titolo: ${n}`, thumbnail: await fetch(n4) }, { quoted: m })
 } catch {
-await conn.reply(m.chat, 'errore', m)}
+return}
 }}
 handler.command = /^fgmp4|dlmp4|getvid|yt(v|mp4)?$/i
 export default handler

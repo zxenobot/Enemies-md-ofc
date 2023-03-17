@@ -16,8 +16,8 @@ sider.push(member[i])}
 }else {
 total++
 sider.push(member[i])}}}
-if(total == 0) return conn.reply(m.chat, `nessun inattivo`, m) 
-m.reply(`revisione inattivi\n\n ${await conn.getName(m.chat)}\nMembri: ${sum}\n\nInattivi:\n${sider.map(v => '  👉🏻 @' + v.replace(/@.+/, '')).join('\n')}\n`, null, { mentions: sider })}
+if(total == 0) return conn.reply(m.chat, `𝐧𝐞𝐬𝐬𝐮𝐧 𝐢𝐧𝐚𝐭𝐭𝐢𝐯𝐨`, m) 
+m.reply(`𝐑𝐞𝐯𝐢𝐬𝐢𝐨𝐧𝐞 𝐢𝐧𝐚𝐭𝐭𝐢𝐯𝐢 😴\n${await conn.getName(m.chat)}\n\n𝐢𝐧𝐚𝐭𝐭𝐢𝐯𝐢:\n${sider.map(v => '  👉🏻 @' + v.replace(/@.+/, '')).join('\n')}\n`, null, { mentions: sider })}
 handler.command = /^(verfantasmas|fantasmas|inattivi)$/i
 handler.admin = true
 handler.botAdmin = true

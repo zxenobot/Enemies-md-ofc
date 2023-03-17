@@ -1,5 +1,5 @@
 let handler = async (m, { conn, args, command }) => {
-await m.reply('bye bye') 
+await m.reply('𝐛𝐲𝐞 𝐛𝐲𝐞👋') 
 await  conn.groupLeave(m.chat)}
 handler.command = /^(out|leavegc|leave|salirdelgrupo)$/i
 handler.group = true

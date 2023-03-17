@@ -10,7 +10,7 @@ watch
 } from 'fs'
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 
-conn.reply(m.chat, 'archivi eliminati con successo', m)
+conn.reply(m.chat, '𝐚𝐫𝐜𝐡𝐢𝐯𝐢 𝐞𝐥𝐢𝐦𝐢𝐧𝐚𝐭𝐢 𝐜𝐨𝐧 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐨 ✓', m)
 
 const tmp = [tmpdir(), join(__dirname, '../tmp')]
 const filename = []

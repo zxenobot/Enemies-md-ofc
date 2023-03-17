@@ -5,11 +5,8 @@ const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
 let pesan = args.join` `
 let oi = `${pesan}`
-let text = `sveglia admin
+let text = `⚠️ 𝐒𝐕𝐄𝐆𝐋𝐈𝐀 𝐀𝐃𝐌𝐈𝐍 ⚠️
 
-${oi}
-
-Admin
 ${listAdmin}
 
 `.trim()
@@ -17,6 +14,6 @@ conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...groupAdmi
 }
 handler.help = ['admins <texto>']
 handler.tags = ['group']
-handler.command = /^(admins|@admins|dmins)$/i
+handler.command = /^(admins|@admins|admin)$/i
 handler.group = true
 export default handler

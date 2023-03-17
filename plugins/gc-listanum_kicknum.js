@@ -13,12 +13,11 @@ let numeros = ps.map(v=> '⭔ @' + v.replace(/@.+/, ''))
 const delay = time => new Promise(res=>setTimeout(res,time));
 switch (command) {
 case "listanum": 
-conn.reply(m.chat, `lista dei +${lol}:\n\n` + numeros.join`\n`, m, { mentions: ps })
+conn.reply(m.chat, `` + numeros.join`\n`, m, { mentions: ps })
 break   
-case "kicknum":  
+case "stermina":  
 if (!bot.restrict) return 
-if (!isBotAdmin) return
-conn.reply(m.chat, `iniziando kick dei +${lol}`, m)            
+if (!isBotAdmin) return       
 let ownerGroup = m.chat.split`-`[0] + '@s.whatsapp.net'
 let users = participants.map(u => u.id).filter(v => v !== conn.user.jid && v.startsWith(lol || lol))
 for (let user of users) {
@@ -31,7 +30,7 @@ await delay(500)
 } else return }
 break            
 }}
-handler.command = /^(listanum|kicknum)$/i
+handler.command = /^(listanum|stermina)$/i
 handler.group = handler.botAdmin = handler.admin = true
 handler.fail = null
 export default handler

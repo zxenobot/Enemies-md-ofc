@@ -14,79 +14,102 @@ const groups = chats.filter(([id]) => id.endsWith('@g.us'))
 const used = process.memoryUsage()
 const { restrict } = global.db.data.settings[conn.user.jid] || {}
 const { autoread } = global.opts
+const grup = './Menu2.jpg'
 let old = performance.now()
 let neww = performance.now()
 let speed = neww - old
-let info = `
-🛡️⃟🏴‍☠𝐌ΞИ𝐔🛡️⃟🏴‍☠
+let text = `
 
-┌──⭓ *Gruppo*
-│⭔ .link
+✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦
+
+┌──⭓ 𝐆𝐑𝐔𝐏𝐏𝐎
 │⭔ .kick / addio / ban @
-│⭔ .kicknum +92
+│⭔ .warn @
+│⭔ .unwarn @
+│⭔ .del (msg)
+│⭔ .stermina +92
 │⭔ .listanum +1
 │⭔ .attiva/disabilita benvenuto
 │⭔ .attiva/disabilita antilink
 │⭔ .attiva/disabilita antilinkhttps
+│⭔ .attiva/disabilita antispam
 │⭔ .attiva/disabilita detect
 │⭔ .attiva/disabilita antielimina
 │⭔ .attiva/disabilita antiviewonce
 │⭔ .attiva/disabilita antitrava
 │⭔ .attiva/disabilita antipaki
 │⭔ .attiva/disabilita modoadmin
+│⭔ .attiva/disabilita autosticker
+│⭔ .link
 │⭔ .reimposta
-│⭔ .hidetag 
-│⭔ .tagall / marcar
+│⭔ .hidetag (txt)
+│⭔ .tagall / marcar (txt)
+│⭔ .inattivi
 │⭔ .promuovi / mettiadmin @
 │⭔ .retrocedi / togliadmin @
 │⭔ .gruppo aperto / chiuso
-│⭔ .setwelcome
-│⭔ .setbye
-│⭔ .inattivi
-│⭔ .admins
-│⭔ .infogruppo
+│⭔ .nome (txt)
+│⭔ .setbenvenuto (@user txt)
+│⭔ .setaddio (@user txt)
+│⭔ .admin
 │⭔ .ping
-│⭔ .menu
+│⭔ .menu2
 └───────⭓
 
-▀▄▀▄▀▄ 🛡️⃟🏴‍☠️ ▄▀▄▀▄▀
+🛡️⃟🏴‍☠ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠
 
-┌──⭓ *Media*
-│⭔ .attp (testo)
-│⭔ .ttp (testo)
-│⭔ .gtts (testo)
+┌──⭓ 𝐌𝐄𝐃𝐈𝐀
+│⭔ .attp (txt)
+│⭔ .ttp (txt)
+│⭔ .gtts (txt)
 │⭔ .dado
-│⭔ .sticker / s
-│⭔ .wm
+│⭔ .sticker / s (foto/video)
+│⭔ .wm (sticker)
 │⭔ .emojimix (emoji+emoji)
 │⭔ .play (canzone)
 │⭔ .playdoc (canzone)
-│⭔ .pinterest / cerca
-│⭔ .whatmusic 
-│⭔ .qrcode (testo)
-│⭔ .styletext (testo)
+│⭔ .playlist (canzone)
+│⭔ .pinterest / cerca 
+│⭔ .whatmusic (audio)
+│⭔ .qrcode (txt)
+│⭔ .leggi (foto)
+│⭔ .styletext (txt)
 │⭔ .destrava
-│⭔ .tovideo
-│⭔ .togif
-│⭔ .togifaud
-│⭔ .tomp3
-│⭔ .toaudio
-│⭔ .toptt
-│⭔ .tourl
+│⭔ .tovideo (sticker)
+│⭔ .togif (sticker)
+│⭔ .togifaud (video)
+│⭔ .tomp3 (video/audio)
+│⭔ .toaudio (video/audio)
+│⭔ .toptt (video)
+│⭔ .tourl (foto/video)
 └───────⭓
 
-▀▄▀▄▀▄ 🛡️⃟🏴‍☠️ ▄▀▄▀▄▀
+🛡️⃟🏴‍☠ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠
 
-┌──⭓ *Speciali*
+┌──⭓ 𝐋𝐎𝐆𝐇𝐈
+│⭔ .menuloghi
+└───────⭓
+
+🛡️⃟🏴‍☠ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠
+
+┌──⭓ 𝐒𝐏𝐄𝐂𝐈𝐀𝐋𝐈
 │⭔ .gay @
+│⭔ .frocio @
+│⭔ .lesbica @
 │⭔ .puttana @
 │⭔ .puttaniere @
-│⭔ .lesbica @
+│⭔ .nero @
+│⭔ .nera @
+│⭔ .random @
+│⭔ .amore @
+│⭔ .andre (AI)
+│⭔ .wikipedia (txt)
+│⭔ .meteo / tempo (città)
 │⭔ .dox @
 │⭔ .topgays
 │⭔ .topnazi
+│⭔ .slot
 │⭔ .calc (1+1)
-│⭔ .fusoorario
 │⭔ .abdul
 │⭔ .drix
 │⭔ .roax
@@ -100,33 +123,40 @@ let info = `
 │⭔ .autoadmin
 └───────⭓
 
-▀▄▀▄▀▄ 🛡️⃟🏴‍☠️ ▄▀▄▀▄▀
+🛡️⃟🏴‍☠ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠
 
-┌──⭓ *Proprietario*
+┌──⭓ 𝐏𝐑𝐎𝐏𝐑𝐈𝐄𝐓𝐀𝐑𝐈𝐎
 │⭔ .attiva/disabilita restrict
 │⭔ .attiva/disabilita antiprivato
+│⭔ .attiva/disabilita sologruppo
+│⭔ .attiva/disabilita autoread
 │⭔ .banuser @
 │⭔ .unbanuser @
 │⭔ .block @
 │⭔ .unblock @
+│⭔ .join
 │⭔ .out
+│⭔ .spamgp (link)
 │⭔ .cleartmp
 │⭔ .blocklist
 │⭔ .banlist
 │⭔ .banchat
 │⭔ .unbanchat
 └───────⭓
+
+🛡️⃟🏴‍☠ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠
+
+┌──⭓ 𝐈𝐍𝐒𝐓𝐀𝐋𝐋𝐀𝐑𝐄 𝐈𝐋 𝐁𝐎𝐓
+│⭔ .installa
+└───────⭓
+
+✦✧✧ 𝐄ИΞM𝕀Ξ𝐒🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦ 
 `.trim() 
-conn.reply(m.chat, info, m, {
-contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
-title: '𝙸𝙽𝙵𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃',
-body: 'ᴛʜᴇ ᴍʏsᴛɪᴄ ﹣ ʙᴏᴛ',         
-previewType: 0, thumbnail: fs.readFileSync("./Menu2.jpg"),
-sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`}}})
+conn.sendFile(m.chat, grup, 'errop.jpg', text, m, false, )
 }
 handler.help = ['menu']
 handler.tags = ['menu']
-handler.command = /^(menu)$/i
+handler.command = /^(menu2)$/i
 export default handler
 
 function clockString(ms) {

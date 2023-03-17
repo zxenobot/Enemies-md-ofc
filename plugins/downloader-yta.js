@@ -1,8 +1,8 @@
 import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
-if (!args[0]) throw 'riprova'
-await m.reply(`quasi pronto...`)
+if (!args[0]) return
+await m.reply(`. . .`)
 try {
 let q = '128kbps'
 let v = args[0]
@@ -19,7 +19,7 @@ let n = lolh.result.title || 'error'
 await conn.sendMessage(m.chat, { audio: { url: lolh.result.link }, fileName: `${n}.mp3`, mimetype: 'audio/mp4' }, { quoted: m })
 //await conn.sendFile(m.chat, lolh.result.link, `${n}.mp3`, null, m, false, { mimetype: 'audio/mp4' })    
 } catch {
-await conn.reply(m.chat, 'errore', m)}
+return}
 }}
 handler.command = /^fgmp3|dlmp3|getaud|yt(a|mp3)$/i
 export default handler

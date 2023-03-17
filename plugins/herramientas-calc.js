@@ -4,7 +4,7 @@ conn.math = conn.math ? conn.math : {}
 if (id in conn.math) {
 clearTimeout(conn.math[id][3])
 delete conn.math[id]
-m.reply('stai barando')
+return
 }
 let val = text
 .replace(/[^0-9\-\/+*×÷πEe()piPI/]/g, '')
@@ -26,7 +26,7 @@ let result = (new Function('return ' + val))()
 if (!result) throw result
 m.reply(`*${format}* = _${result}_`)
 } catch (e) {
-if (e == undefined) throw 'cosa devo calcolare'
+if (e == undefined) return
 throw 'ammessi solo i simboli: -, +, *, /, ×, ÷, π, e, (, )'
 }}
 handler.help = ['calc <expression>']

@@ -9,10 +9,10 @@ try {
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/webp|image|video/g.test(mime)) {
-if (/video/g.test(mime)) if ((q.msg || q).seconds > 8) return m.reply('video troppo lungo')
+if (/video/g.test(mime)) if ((q.msg || q).seconds > 9) return m.reply('𝐯𝐢𝐝𝐞𝐨 𝐭𝐫𝐨𝐩𝐩𝐨 𝐥𝐮𝐧𝐠𝐨 ✗')
 let img = await q.download?.()
 
-if (!img) throw `rispondi a video o immagini ${usedPrefix + command}`
+if (!img) return
 
 let out
 try {
@@ -30,7 +30,7 @@ stiker = await sticker(false, out, global.packname, global.author)
 } else if (args[0]) {
 if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
 
-else return m.reply('error')
+else return 
   
 }
 } catch (e) {
@@ -39,7 +39,7 @@ if (!stiker) stiker = e
 } finally {
 if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
 
-else throw 'error'
+else return
 
 }}
 handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']

@@ -16,18 +16,18 @@ let j = ps.getRandom()
 
 if (command == 'topgays') {
 let vn = './media/gay2.mp3'
-let top = `*🌈Top 10 LGBT🌈*
+let top = `🌈𝐓𝐨𝐩 𝟏𝟎 𝐋𝐆𝐁𝐓🌈
     
-*_1.- ${user(a)}_*
-*_2.- ${user(b)}_*
-*_3.- ${user(c)}_*
-*_4.- ${user(d)}_*
-*_5.- ${user(e)}_*
-*_6.- ${user(f)}_*
-*_7.- ${user(g)}_*
-*_8.- ${user(h)}_*
-*_9.- ${user(i)}_*
-*_10.- ${user(j)}_*`
+1. ${user(a)}
+2. ${user(b)} 
+3. ${user(c)} 
+4. ${user(d)}
+5. ${user(e)}
+6. ${user(f)}
+7. ${user(g)}
+8. ${user(h)}
+9. ${user(i)}
+10. ${user(j)}`
 m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
 conn.sendMessage(m.chat, { quoted: m })    
 //conn.sendFile(m.chat, vn, 'error.mp3', null, m, true, { type: 'audioMessage', ptt: true })
@@ -35,18 +35,18 @@ conn.sendMessage(m.chat, { quoted: m })
     
 if (command == 'topnazi') {
 let vn = './media/otaku.mp3'
-let top = `*TOP 10 NAZI 卐*
+let top = `𝐓𝐨𝐩 𝟏𝟎 𝐍𝐀𝐙𝐈 卐💂🏻‍♂️
     
-*_1.- ${user(a)}_*
-*_2.- ${user(b)}_*
-*_3.- ${user(c)}_*
-*_4.- ${user(d)}_*
-*_5.- ${user(e)}_*
-*_6.- ${user(f)}_*
-*_7.- ${user(g)}_*
-*_8.- ${user(h)}_*
-*_9.- ${user(i)}_*
-*_10.- ${user(j)}_*`
+1. ${user(a)}
+2. ${user(b)}
+3. ${user(c)}
+4. ${user(d)}
+5. ${user(e)}
+6. ${user(f)}
+7. ${user(g)}
+8. ${user(h)}
+9. ${user(i)}
+10. ${user(j)}`
 m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
 conn.sendMessage(m.chat, { quoted: m })        
 //conn.sendFile(m.chat, vn, 'otaku.mp3', null, m, true, { type: 'audioMessage', ptt: true })

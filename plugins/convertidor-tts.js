@@ -1,7 +1,7 @@
 import gtts from 'node-gtts'
 import { readFileSync, unlinkSync } from 'fs'
 import { join } from 'path'
-const defaultLang = 'es'
+const defaultLang = 'it'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 let lang = args[0]
 let text = args.slice(1).join(' ')
@@ -15,7 +15,7 @@ try { res = await tts(text, lang) }
 catch (e) {
 m.reply(e + '')
 text = args.join(' ')
-if (!text) throw `inserisci il testo`
+if (!text) return
 res = await tts(text, defaultLang)
 } finally {
 if (res) conn.sendFile(m.chat, res, 'tts.opus', null, m, true)    
@@ -25,7 +25,7 @@ handler.tags = ['tools']
 handler.command = /^g?tts$/i
 export default handler
 
-function tts(text, lang = 'es') {
+function tts(text, lang = 'it') {
 console.log(lang, text)
 return new Promise((resolve, reject) => {
 try {
@@ -37,3 +37,4 @@ unlinkSync(filePath)
 })
 } catch (e) { reject(e) }
 })}
+

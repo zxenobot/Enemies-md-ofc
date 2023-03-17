@@ -1,8 +1,8 @@
 import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
-if (!args[0]) throw 'riprova'
-await m.reply(`quasi pronto...`)
+if (!args[0]) return
+await m.reply(`. . .`)
 try {
 let q = '128kbps'
 let v = args[0]
@@ -22,7 +22,7 @@ let n3 = lolh.result.size
 let cap2 = `youtube download\n❏ Titolo: ${n}`.trim()
 await conn.sendMessage(m.chat, { document: { url: n2 }, caption: cap2, mimetype: 'audio/mpeg', fileName: `${n}.mp3`}, {quoted: m})
 } catch {
-await conn.reply(m.chat, 'errore', m)}
+return}
 }}
 handler.command = /^ytmp3doc|ytadoc|ytmp3.2|yta.2$/i
 export default handler

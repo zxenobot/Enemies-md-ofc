@@ -1,5 +1,5 @@
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
-if (!text) throw `manca il testo`
+if (!text) return
 let teks = encodeURI(text)
 
 if (command == 'attp2') {
