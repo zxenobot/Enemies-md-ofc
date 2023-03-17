@@ -9,9 +9,9 @@ const urll = 'http://www.youtube.com/watch?v=' + videoId
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]
 const buttons = [
-{ buttonId: `.ytmp3 ${urll}`, buttonText: { displayText: '🎵 𝐚𝐮𝐝𝐢𝐨' }, type: 1 },
-{ buttonId: `.ytmp4 ${urll}`, buttonText: { displayText: '🎥 𝐯𝐢𝐝𝐞𝐨' }, type: 1 },
-{ buttonId: `.playlist ${text}`, buttonText: { displayText: '𝐩𝐢𝐮̀ 𝐫𝐢𝐬𝐮𝐥𝐭𝐚𝐭𝐢' }, type: 1 }, ]    
+{ buttonId: `${usedPrefix}ytmp3 ${urll}`, buttonText: { displayText: '🎵 𝐚𝐮𝐝𝐢𝐨' }, type: 1 },
+{ buttonId: `${usedPrefix}ytmp4 ${urll}`, buttonText: { displayText: '🎥 𝐯𝐢𝐝𝐞𝐨' }, type: 1 },
+{ buttonId: `${usedPrefix}playlist ${text}`, buttonText: { displayText: '𝐩𝐢𝐮̀ 𝐫𝐢𝐬𝐮𝐥𝐭𝐚𝐭𝐢' }, type: 1 }, ]    
 let texto1 = `${title}
 📆 Risale a ${publishedTime}
 ⌚ ${durationH}
@@ -27,7 +27,7 @@ let ytLink = await fetch(`http://api.lolhuman.xyz/api/ytplay2?apikey=${lolkeysap
 let jsonn = await ytLink.json()
 let aud = await jsonn.result.audio
 let capt = `${title}\n📆 Risale a ${published}\n👀 ${views}`
-const buttons = [{buttonId: `.playlist ${title}`, buttonText: {displayText: '𝐩𝐢𝐮̀ 𝐫𝐢𝐬𝐮𝐥𝐭𝐚𝐭𝐢'}, type: 1}]
+const buttons = [{buttonId: `${usedPrefix}playlist ${title}`, buttonText: {displayText: '𝐩𝐢𝐮̀ 𝐫𝐢𝐬𝐮𝐥𝐭𝐚𝐭𝐢'}, type: 1}]
 const buttonMessage = { image: {url: thumbnail}, caption: capt, footer: '. . .', buttons: buttons, headerType: 4 }
 let msg = await conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 conn.sendMessage(m.chat, { audio: { url: aud }, mimetype: 'audio/mp4', fileName: `${title}.mp3`}, {quoted: msg})

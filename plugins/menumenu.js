@@ -14,13 +14,10 @@ const groups = chats.filter(([id]) => id.endsWith('@g.us'))
 const used = process.memoryUsage()
 const { restrict } = global.db.data.settings[conn.user.jid] || {}
 const { autoread } = global.opts
-const grup = './Menu2.jpg'
 let old = performance.now()
 let neww = performance.now()
 let speed = neww - old
-let text = `
-
-✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦
+conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦
 
 ┌──⭓ 𝐆𝐑𝐔𝐏𝐏𝐎
 │⭔ .kick / addio / ban @
@@ -86,16 +83,6 @@ let text = `
 
 🛡️⃟🏴‍☠ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠
 
-┌──⭓ 𝐋𝐎𝐆𝐇𝐈
-│⭔ .loli (txt)
-│⭔ .neon (txt)
-│⭔ .devil (txt)
-│⭔ .wolf (txt)
-│⭔ .pornhub (txt) + (txt)
-└───────⭓
-
-🛡️⃟🏴‍☠ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠
-
 ┌──⭓ 𝐒𝐏𝐄𝐂𝐈𝐀𝐋𝐈
 │⭔ .gay @
 │⭔ .frocio @
@@ -152,15 +139,12 @@ let text = `
 
 ┌──⭓ 𝐈𝐍𝐒𝐓𝐀𝐋𝐋𝐀𝐑𝐄 𝐈𝐋 𝐁𝐎𝐓
 │⭔ .installa
-└───────⭓
-
-✦✧✧ 𝐄ИΞM𝕀Ξ𝐒🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦ 
-`.trim() 
-conn.sendFile(m.chat, grup, 'errop.jpg', text, m, false, )
+└───────⭓`, [[`
+✦✧✧ 𝐄ИΞM𝕀Ξ𝐒🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦`]], [[`𝐌ΞИ𝐔 𝐋𝐎𝐆𝐇𝐈`, `${usedPrefix}menuloghi`]], m)
 }
 handler.help = ['menu']
 handler.tags = ['menu']
-handler.command = /^(menu2)$/i
+handler.command = /^(menu)$/i
 export default handler
 
 function clockString(ms) {

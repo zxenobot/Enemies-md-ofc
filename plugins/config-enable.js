@@ -221,7 +221,7 @@ default:
 if (!/[01]/.test(command)) return 
 throw false
 }
-conn.sendButton(m.chat, `${type} ${isEnable ? '✓ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}`, wm2, null, [[`${isEnable ? '𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚' : '𝐚𝐭𝐭𝐢𝐯𝐚'}`, `${isEnable ? `.0 ${type}` : `.1 ${type}`}`]], m)}
+conn.sendButton(m.chat, `${type} ${isEnable ? '✓ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}`, wm2, null, [[`${isEnable ? '𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚' : '𝐚𝐭𝐭𝐢𝐯𝐚'}`, `${isEnable ? `${usedPrefix}0 ${type}` : `${usedPrefix}1 ${type}`}`]], m)}
 handler.help = ['attiva', 'disabilita'].map(v => v + '<option>')
 handler.tags = ['group', 'owner']
 handler.command = /^((attiva|disabilita)|(turn)?[01])$/i

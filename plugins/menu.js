@@ -159,7 +159,7 @@ sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`}}})
 }
 handler.help = ['menu']
 handler.tags = ['menu']
-handler.command = /^(menu)$/i
+handler.command = /^(menu3)$/i
 export default handler
 
 function clockString(ms) {
