@@ -893,6 +893,13 @@ if (!isNumber(user.antispam)) user.antispam = 0
                 if (!('autosticker' in chat)) chat.autosticker = false                    
                 if (!('audios' in chat)) chat.audios = false                            
                 if (!('antiLink' in chat)) chat.antiLink = true
+if (!('antilinkbase' in chat)) chat.antilinkbase = false
+if (!('antitelegrambase' in chat)) chat.antitelegrambase = false
+if (!('antitiktokbase' in chat)) chat.antitiktokbase = false
+if (!('antitiktokhard' in chat)) chat.antitiktokhard = false
+if (!('antiinstahard' in chat)) chat.antiinstahard = false
+if (!('antiinstabase' in chat)) chat.antiinstabase = false
+if (!('antitelegramhard' in chat)) chat.antitelegramhard = false
 if (!('antiSpam' in chat)) chat.antiSpam = false
                 if (!('antiLink2' in chat)) chat.antiLink2 = false
                 if (!('antiviewonce' in chat)) chat.antiviewonce = false
@@ -917,6 +924,13 @@ if (!('antiSpam' in chat)) chat.antiSpam = false
                     antiLink: true,
 antiSpam: false,
                     antiLink2: false,
+                    antilinkbase: false,
+                    antitelegrambase: false,
+                    antitiktokbase: false,
+                    antiinstabase: false,
+                    antiinstahard: false,
+                    antitiktokhard: false,
+                    antitelegramhard: false,
                     antiviewonce: false,
                     antiToxic: false,
                     antiTraba: true,
