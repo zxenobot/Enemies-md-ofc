@@ -8,7 +8,7 @@ var number = text
 }
 	
 if(!text && !m.quoted) return
-if(number.length > 13 || (number.length < 11 && number.length > 0)) return
+if(number.length > 20 || (number.length < 20 && number.length > 0)) return
 	
 try {
 if(text) {

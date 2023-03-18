@@ -1,4 +1,4 @@
-et linkRegex = /tiktok.com/i
+let linkRegex = /tiktok.com/i
 export async function before(m, { isAdmin, groupMetadata, isBotAdmin }) {
 if (m.isBaileys && m.fromMe)
 return !0
