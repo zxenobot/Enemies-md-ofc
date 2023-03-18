@@ -27,7 +27,14 @@ conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 
 │⭔ .stermina +92
 │⭔ .listanum +1
 │⭔ .attiva/disabilita benvenuto
-│⭔ .attiva/disabilita antilink
+│⭔ .attiva/disabilita antilinkgp
+│⭔ .attiva/disabilita antilinkhard
+│⭔ .attiva/disabilita antitelegram
+│⭔ .attiva/disabilita antitghard
+│⭔ .attiva/disabilita antitiktok
+│⭔ .attiva/disabilita antitiktokhard
+│⭔ .attiva/disabilita antiinstagram
+│⭔ .attiva/disabilita antiighard
 │⭔ .attiva/disabilita antilinkhttps
 │⭔ .attiva/disabilita antispam
 │⭔ .attiva/disabilita detect
@@ -50,7 +57,6 @@ conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 
 │⭔ .setaddio (@user txt)
 │⭔ .admin
 │⭔ .ping
-│⭔ .menu2
 └───────⭓
 
 🛡️⃟🏴‍☠ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠
@@ -121,11 +127,12 @@ conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 
 │⭔ .attiva/disabilita antiprivato
 │⭔ .attiva/disabilita sologruppo
 │⭔ .attiva/disabilita autoread
+│⭔ .prefisso (nuovo prefisso)
 │⭔ .banuser @
 │⭔ .unbanuser @
 │⭔ .block @
 │⭔ .unblock @
-│⭔ .join
+│⭔ .join (link)
 │⭔ .out
 │⭔ .spamgp (link)
 │⭔ .cleartmp
@@ -140,7 +147,7 @@ conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 
 ┌──⭓ 𝐈𝐍𝐒𝐓𝐀𝐋𝐋𝐀𝐑𝐄 𝐈𝐋 𝐁𝐎𝐓
 │⭔ .installa
 └───────⭓`, [[`
-✦✧✧ 𝐄ИΞM𝕀Ξ𝐒🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦`]], [[`𝐌ΞИ𝐔 𝐋𝐎𝐆𝐇𝐈`, `${usedPrefix}menuloghi`]], m)
+✦✧✧ 𝐄ИΞM𝕀Ξ𝐒🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦`]], [[`𝐌ΞИ𝐔 𝐋𝐎𝐆𝐇𝐈 🎨`, `${usedPrefix}menuloghi`]], m)
 }
 handler.help = ['menu']
 handler.tags = ['menu']
