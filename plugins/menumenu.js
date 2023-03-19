@@ -128,6 +128,7 @@ conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 
 │⭔ .attiva/disabilita sologruppo
 │⭔ .attiva/disabilita autoread
 │⭔ .prefisso (nuovo prefisso)
+│⭔ .aggiornamento
 │⭔ .banuser @
 │⭔ .unbanuser @
 │⭔ .block @
