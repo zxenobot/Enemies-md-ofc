@@ -1,4 +1,4 @@
-let linkRegex = /instagram.com/i
+let linkRegex = /instagram.com\/([0-9A-Za-z]{3,40})/i
 export async function before(m, { isAdmin, isBotAdmin, text }) {
 if (m.isBaileys && m.fromMe)
 return !0
