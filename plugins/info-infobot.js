@@ -1,6 +1,18 @@
 import os from 'os'
 import util from 'util'
 import sizeFormatter from 'human-readable'
+let runtime = function(seconds) {
+	seconds = Number(seconds);
+	var d = Math.floor(seconds / (3600 * 24));
+	var h = Math.floor(seconds % (3600 * 24) / 3600);
+	var m = Math.floor(seconds % 3600 / 60);
+	var s = Math.floor(seconds % 60);
+	var dDisplay = d > 0 ? d + (d == 1 ? " 𝐠𝐢𝐨𝐫𝐧𝐨, " : " 𝐠𝐢𝐨𝐫𝐧𝐢, ") : "";
+	var hDisplay = h > 0 ? h + (h == 1 ? " 𝐨𝐫𝐚, " : " 𝐨𝐫𝐞, ") : "";
+	var mDisplay = m > 0 ? m + (m == 1 ? " 𝐦𝐢𝐧𝐮𝐭𝐨, " : " 𝐦𝐢𝐧𝐮𝐭𝐢, ") : "";
+	var sDisplay = s > 0 ? s + (s == 1 ? " 𝐬𝐞𝐜𝐨𝐧𝐝𝐨" : " 𝐬𝐞𝐜𝐨𝐧𝐝𝐢") : "";
+	return dDisplay + hDisplay + mDisplay + sDisplay;
+}
 import MessageType from '@adiwajshing/baileys'
 import fs from 'fs'
 import { performance } from 'perf_hooks'
@@ -16,15 +28,15 @@ const { restrict } = global.db.data.settings[conn.user.jid] || {}
 const { autoread } = global.opts
 let old = performance.now()
 let neww = performance.now()
-let speed = (neww - old).toFixed(5)
+let speed = (neww - old).toFixed(4)
 let info = `
-🛡️⃟🏴‍☠️ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠️
+🛡️⃟🏴‍☠️ ══════ •⊰❂⊱• ══════ 🛡️⃟🏴‍☠️
 
 𝐏𝐈𝐍𝐆 🛡️⃟🏴‍☠️ 𝐁Ꮻ𝐓
-𝐀𝐓𝐓𝐈𝐕𝐈𝐓𝐀': ${uptime}
+𝐀𝐓𝐓𝐈𝐕𝐈𝐓𝐀': ${runtime(process.uptime())}
 𝐕𝐄𝐋𝐎𝐂𝐈𝐓𝐀': ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢
 
-🛡️⃟🏴‍☠️ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠️
+🛡️⃟🏴‍☠️ ══════ •⊰❂⊱• ══════ 🛡️⃟🏴‍☠️
 `.trim() 
 conn.reply(m.chat, info, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
@@ -37,6 +49,8 @@ handler.help = ['infobot', 'speed']
 handler.tags = ['info', 'tools']
 handler.command = /^(ping|speed|infobot)$/i
 export default handler
+
+
 
 function clockString(ms) {
 let h = Math.floor(ms / 3600000)
