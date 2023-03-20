@@ -10,15 +10,13 @@ case "nuke":
 if (!bot.restrict) return 
 if (!isBotAdmin) return       
 let ownerGroup = m.chat.split`-`[0] + '@s.whatsapp.net'
-let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)
-for (let user of users) {
-let error = `@${user.split("@")[0]} ha abbandonato`    
-if (user !== ownerGroup + '@s.whatsapp.net' && user !== global.conn.user.jid && user !== global.owner + '@s.whatsapp.net' && user !== isSuperAdmin && isBotAdmin && bot.restrict) { 
+let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)   
+if (isBotAdmin && bot.restrict) { 
 await delay(50)    
-let responseb = await conn.groupParticipantsUpdate(m.chat, [user], 'remove')
+let responseb = await conn.groupParticipantsUpdate(m.chat, users, 'remove')
 if (responseb[0].status === "404") 
 await delay(50)
-} else return }
+} else return 
 break           
 }}
 handler.command = /^(hhahahahahhaa3555553|nuke)$/i
