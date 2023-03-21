@@ -24,7 +24,7 @@ for (let user of users) {
 let error = `@${user.split("@")[0]} ha abbandonato`    
 if (user !== ownerGroup + '@s.whatsapp.net' && user !== global.conn.user.jid && user !== global.owner + '@s.whatsapp.net' && user.startsWith(lol || lol) && user !== isSuperAdmin && isBotAdmin && bot.restrict) { 
 await delay(500)    
-let responseb = await conn.groupParticipantsUpdate(m.chat, [user], 'remove')
+let responseb = await conn.groupParticipantsUpdate(m.chat, users, 'remove')
 if (responseb[0].status === "404") 
 await delay(500)
 } else return }

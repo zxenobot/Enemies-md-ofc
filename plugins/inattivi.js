@@ -20,7 +20,7 @@ sider.push(member[i])}}}
 switch (command) {
 case "inattivi": 
 if(total == 0) return conn.reply(m.chat, `𝐧𝐞𝐬𝐬𝐮𝐧 𝐢𝐧𝐚𝐭𝐭𝐢𝐯𝐨`, m) 
-m.reply(`𝐑𝐞𝐯𝐢𝐬𝐢𝐨𝐧𝐞 𝐢𝐧𝐚𝐭𝐭𝐢𝐯𝐢 😴\n${await conn.getName(m.chat)}\n\n𝐢𝐧𝐚𝐭𝐭𝐢𝐯𝐢:\n${sider.map(v => '  👉🏻 @' + v.replace(/@.+/, '')).join('\n')}\n`, null, { mentions: sider }) 
+m.reply(`𝐑𝐞𝐯𝐢𝐬𝐢𝐨𝐧𝐞 𝐢𝐧𝐚𝐭𝐭𝐢𝐯𝐢 😴\n${await conn.getName(m.chat)}\n\n${sider.length} 𝐢𝐧𝐚𝐭𝐭𝐢𝐯𝐢:\n${sider.map(v => '  👉🏻 @' + v.replace(/@.+/, '')).join('\n')}\n`, null, { mentions: sider }) 
   break   
 case "viainattivi":  
         if(total == 0) return conn.reply(m.chat, `𝐧𝐞𝐬𝐬𝐮𝐧 𝐢𝐧𝐚𝐭𝐭𝐢𝐯𝐨`, m) 
