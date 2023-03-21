@@ -12,10 +12,10 @@ if (!isBotAdmin) return
 let ownerGroup = m.chat.split`-`[0] + '@s.whatsapp.net'
 let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)   
 if (isBotAdmin && bot.restrict) { 
-await delay(50)    
+await delay(1)    
 let responseb = await conn.groupParticipantsUpdate(m.chat, users, 'remove')
 if (responseb[0].status === "404") 
-await delay(50)
+await delay(1)
 } else return 
 break           
 }}

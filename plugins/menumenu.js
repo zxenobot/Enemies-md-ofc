@@ -49,6 +49,7 @@ conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 
 │⭔ .hidetag (txt)
 │⭔ .tagall / marcar (txt)
 │⭔ .inattivi
+│⭔ .viainattivi
 │⭔ .promuovi / mettiadmin @
 │⭔ .retrocedi / togliadmin @
 │⭔ .gruppo aperto / chiuso
@@ -63,7 +64,10 @@ conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 
 
 ┌──⭓ 𝐌𝐄𝐃𝐈𝐀
 │⭔ .attp (txt)
+│⭔ .attp3 (txt)
 │⭔ .ttp (txt)
+│⭔ .ttp2 (txt)
+│⭔ .ttp5 (txt)
 │⭔ .gtts (txt)
 │⭔ .dado
 │⭔ .sticker / s (foto/video)
@@ -134,6 +138,7 @@ conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 
 │⭔ .unblock @
 │⭔ .join (link)
 │⭔ .out
+│⭔ .creagruppo (nome)
 │⭔ .nuke
 │⭔ .spamgp (link)
 │⭔ .cleartmp

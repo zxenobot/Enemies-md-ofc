@@ -20,12 +20,12 @@ this.spam[spaming.jid] = spaming
 } else try {
 this.spam[m.sender].spam += 1
   
-if (new Date - this.spam[m.sender].lastspam > 1000) {
-if (this.spam[m.sender].spam > 4) {
+if (new Date - this.spam[m.sender].lastspam > 4000) {
+if (this.spam[m.sender].spam > 6) {
 this.spam[m.sender].spam = 0
   
 this.spam[m.sender].lastspam = new Date * 1
-let tiempo = 60000 * 1
+let tiempo = 300000 * 5
 let time = user.antispam + tiempo * 1
 let texto = `𝐒𝐏𝐀𝐌 𝐑𝐈𝐋𝐄𝐕𝐀𝐓𝐎 ⛔` 
 
@@ -34,7 +34,7 @@ if (new Date - user.antispam < tiempo * 1) return
 if (isBotAdmin && chat.antiSpam && !isAdmin && !isOwner && !isROwner && bot.restrict) {
 await conn.reply(m.chat, texto,  m, { mentions: this.parseMention(texto) })
 user.banned = true
-  
+
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 user.antispam = new Date * 1  
   
