@@ -17,7 +17,9 @@ const { autoread } = global.opts
 let old = performance.now()
 let neww = performance.now()
 let speed = neww - old
-conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦
+let info = `
+
+✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦
 
 ┌──⭓ 𝐆𝐑𝐔𝐏𝐏𝐎
 │⭔ .kick / addio / ban @
@@ -93,6 +95,12 @@ conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 
 
 🛡️⃟🏴‍☠ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠
 
+┌──⭓ 𝐌ΞИ𝐔 𝐋𝐎𝐆𝐇𝐈 🎨
+│⭔ .menuloghi
+└───────⭓
+
+🛡️⃟🏴‍☠ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠
+
 ┌──⭓ 𝐒𝐏𝐄𝐂𝐈𝐀𝐋𝐈
 │⭔ .gay @
 │⭔ .frocio @
@@ -152,8 +160,15 @@ conn.sendButton(m.chat, `✦✧✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 
 
 ┌──⭓ 𝐈𝐍𝐒𝐓𝐀𝐋𝐋𝐀𝐑𝐄 𝐈𝐋 𝐁𝐎𝐓
 │⭔ .installa
-└───────⭓`, [[`
-✦✧✧ 𝐄ИΞM𝕀Ξ𝐒🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦`]], [[`𝐌ΞИ𝐔 𝐋𝐎𝐆𝐇𝐈 🎨`, `${usedPrefix}menuloghi`]], m)
+└───────⭓
+
+✦✧✧ 𝐄ИΞM𝕀Ξ𝐒🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧✧✦`.trim() 
+conn.reply(m.chat, info, m, {
+contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
+title: '𝙸𝙽𝙵𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃',
+body: 'ᴛʜᴇ ᴍʏsᴛɪᴄ ﹣ ʙᴏᴛ',         
+previewType: 0, thumbnail: fs.readFileSync("./Menu2.jpg"),
+sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`}}})
 }
 handler.help = ['menu']
 handler.tags = ['menu']
