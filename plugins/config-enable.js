@@ -102,37 +102,13 @@ throw false
 }}
 chat.antilinkbase = isEnable
 break
-case 'antitiktok':
+case 'antilink':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
 throw false
 }}
-chat.antitiktokbase = isEnable
-break
-case 'antiinstagram':
-if (m.isGroup) {
-if (!(isAdmin || isOwner)) {
-global.dfail('admin', m, conn)
-throw false
-}}
-chat.antiinstabase = isEnable
-break
-case 'antitiktokhard':
-if (m.isGroup) {
-if (!(isAdmin || isOwner)) {
-global.dfail('admin', m, conn)
-throw false
-}}
-chat.antitiktokhard = isEnable
-break
-case 'antiighard':
-if (m.isGroup) {
-if (!(isAdmin || isOwner)) {
-global.dfail('admin', m, conn)
-throw false
-}}
-chat.antiinstahard = isEnable
+chat.antilinkbase2 = isEnable
 break
 case 'autosticker':
 if (m.isGroup) {
@@ -149,30 +125,6 @@ global.dfail('admin', m, conn)
 throw false
 }}
 chat.antiSpam = isEnable
-break
-case 'antitelegram':
-if (m.isGroup) {
-if (!(isAdmin || isOwner)) {
-global.dfail('admin', m, conn)
-throw false
-}}
-chat.antitelegrambase = isEnable
-break
-case 'antitghard':
-if (m.isGroup) {
-if (!(isAdmin || isOwner)) {
-global.dfail('admin', m, conn)
-throw false
-}}
-chat.antitelegramhard = isEnable
-break
-case 'antilinkhttps':
-if (m.isGroup) {
-if (!(isAdmin || isOwner)) {
-global.dfail('admin', m, conn)
-throw false
-}}
-chat.antiLink2 = isEnable 
 break
 case 'antiviewonce':
 if (m.isGroup) {

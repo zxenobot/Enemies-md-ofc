@@ -29,15 +29,8 @@ let info = `
 │⭔ .stermina +92
 │⭔ .listanum +1
 │⭔ .attiva/disabilita benvenuto
-│⭔ .attiva/disabilita antilinkgp
+│⭔ .attiva/disabilita antilink
 │⭔ .attiva/disabilita antilinkhard
-│⭔ .attiva/disabilita antitelegram
-│⭔ .attiva/disabilita antitghard
-│⭔ .attiva/disabilita antitiktok
-│⭔ .attiva/disabilita antitiktokhard
-│⭔ .attiva/disabilita antiinstagram
-│⭔ .attiva/disabilita antiighard
-│⭔ .attiva/disabilita antilinkhttps
 │⭔ .attiva/disabilita antispam
 │⭔ .attiva/disabilita detect
 │⭔ .attiva/disabilita antielimina

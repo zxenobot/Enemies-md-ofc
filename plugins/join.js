@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, usedPrefix, command, args, participants, i
   let [_, code] = text.match(linkRegex) || []
   if (!code) return
   let owbot = global.owner[1] 
-  await delay(3000)
+  await delay(30)
   try {
   let res = await conn.groupAcceptInvite(code)
   let b = await conn.groupMetadata(res)
