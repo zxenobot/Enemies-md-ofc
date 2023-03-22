@@ -892,7 +892,8 @@ if (!isNumber(user.antispam)) user.antispam = 0
                 if (!('modohorny' in chat)) chat.modohorny = false    
                 if (!('autosticker' in chat)) chat.autosticker = false                    
                 if (!('audios' in chat)) chat.audios = false                            
-                if (!('antiLink' in chat)) chat.antiLink = true
+                if (!('antiLink' in chat)) chat.antiLink = false
+if (!('antilinkbase2' in chat)) chat.antilinkbase = true
 if (!('antilinkbase' in chat)) chat.antilinkbase = false
 if (!('antitelegrambase' in chat)) chat.antitelegrambase = false
 if (!('antitiktokbase' in chat)) chat.antitiktokbase = false
@@ -921,7 +922,8 @@ if (!('antiSpam' in chat)) chat.antiSpam = false
                     modohorny: false,
                     autosticker: false,
                     audios: false,
-                    antiLink: true,
+                    antiLink: false,
+antilinkbase2: true,
 antiSpam: false,
                     antiLink2: false,
                     antilinkbase: false,
