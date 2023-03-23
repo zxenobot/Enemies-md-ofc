@@ -1,21 +1,6 @@
 import { youtubeSearch } from '@bochilteam/scraper'
 let handler = async (m, { conn, args, usedPrefix, command, text }) => {
 if (!text) return
-try {
-const { video } = await youtubeSearch(text)
-const listSections = []
-let teks = [...video ].map(v => {
-switch (v.type) {
-case 'video': {
-listSections.push([`${v.title}`, [
-['𝐕𝐢𝐝𝐞𝐨 🎥', `${usedPrefix}ytmp4 ${v.title}`],
-['𝐕𝐢𝐝𝐞𝐨𝐝𝐨𝐜 🎥', `${usedPrefix}ytmp4doc`, `${v.title}`],    
-['𝐀𝐮𝐝𝐢𝐨 🎧', `${usedPrefix}ytmp3 ${v.title}`],
-['𝐀𝐮𝐝𝐢𝐨𝐝𝐨𝐜 🎧', `${usedPrefix}ytmp3doc ${v.title}`]
-]])
-}}}).filter(v => v).join('\n\n========================\n\n')
-conn.sendList(m.chat, '𝐌𝐮𝐬𝐢𝐜𝐚 𝐭𝐫𝐨𝐯𝐚𝐭𝐚', `${args.join(" ")}`, '𝐬𝐞𝐥𝐞𝐳𝐢𝐨𝐧𝐚 𝐪𝐮𝐢 𝐬𝐨𝐭𝐭𝐨', '𝐫𝐢𝐬𝐮𝐥𝐭𝐚𝐭𝐢', listSections, m)
-} catch {
 try {     
 let get_result = await fetchJson(`http://api.lolhuman.xyz/api/ytsearch?apikey=${lolkeysapi}&query=${text}`)
 let get_result2 = get_result.result 
@@ -34,7 +19,7 @@ const listMessage = { text: teskd, footer: '𝐬𝐞𝐥𝐞𝐳𝐢𝐨𝐧𝐚
 conn.sendMessage(m.chat, listMessage, { quoted: m })    
 } catch {    
 return
-}}}
+}}
 handler.command = /^playlist2|playlist$/i
 export default handler
 async function fetchJson(url, options) {

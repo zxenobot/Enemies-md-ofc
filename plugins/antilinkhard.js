@@ -1,9 +1,9 @@
 import fetch from 'node-fetch'
-const isLink1 = /([A-Za-z]{1,50}).com\/([0-9A-Za-z]{3,50})/i
-const isLink2 = /([A-Za-z]{1,50}).it\/([0-9A-Za-z]{3,50})/i
-const isLink3 = /([A-Za-z]{1,50}).be\/([0-9A-Za-z]{3,50})/i
-const isLink4 = /([A-Za-z]{1,50}).me\/([0-9A-Za-z]{3,50})/i
-const isLink5 = /([A-Za-z]{1,50}).net\/([0-9A-Za-z]{3,50})/i
+const isLink1 = /([A-Za-z]{1,50}).com\/([0-9A-Za-z]{2,250})/i
+const isLink2 = /([A-Za-z]{1,50}).it\/([0-9A-Za-z]{2,250})/i
+const isLink3 = /([A-Za-z]{1,50}).be\/([0-9A-Za-z]{2,250})/i
+const isLink4 = /([A-Za-z]{1,50}).me\/([0-9A-Za-z]{2,250})/i
+const isLink5 = /([A-Za-z]{1,50}).net\/([0-9A-Za-z]{2,250})/i
 
 export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBotAdmin }) {
 if (m.isBaileys && m.fromMe)

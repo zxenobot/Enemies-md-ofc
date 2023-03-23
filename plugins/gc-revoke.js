@@ -1,7 +1,7 @@
 /* Creditos a https://github.com/ALBERTO9883 */
 
 let handler = async(m, { conn }) => {
-let revoke = await conn.groupRevokeInvite(m.chat)}
+let revoke = conn.groupRevokeInvite(m.chat)}
 handler.command = ['reimposta', 'revoke']
 handler.botAdmin = true
 handler.admin = true

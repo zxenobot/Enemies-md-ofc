@@ -9,7 +9,8 @@ try {
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/webp|image|video/g.test(mime)) {
-if (/video/g.test(mime)) if ((q.msg || q).seconds > 9) return m.reply('𝐯𝐢𝐝𝐞𝐨 𝐭𝐫𝐨𝐩𝐩𝐨 𝐥𝐮𝐧𝐠𝐨 ✗')
+if (/video/g.test(mime)) if ((q.msg || q).seconds > 20) return
+m.reply('𝐯𝐢𝐝𝐞𝐨 𝐭𝐫𝐨𝐩𝐩𝐨 𝐥𝐮𝐧𝐠𝐨 ✗')
 let img = await q.download?.()
 
 if (!img) return
@@ -25,7 +26,7 @@ if (/webp/g.test(mime)) out = await webp2png(img)
 else if (/image/g.test(mime)) out = await uploadImage(img)
 else if (/video/g.test(mime)) out = await uploadFile(img)
 if (typeof out !== 'string') out = await uploadImage(img)
-stiker = await sticker(false, out, global.packname, global.author)
+stiker = sticker(false, out, global.packname, global.author)
 }}
 } else if (args[0]) {
 if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
