@@ -3,8 +3,11 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
 try {
 const buttons = [
-{ buttonId: `${usedPrefix}installa`, buttonText: { displayText: '𝐈𝐍𝐒𝐓𝐀𝐋𝐋𝐀𝐑𝐄 𝐈𝐋 𝐁𝐎𝐓' }, type: 1 },
-{ buttonId: `${usedPrefix}menuloghi`, buttonText: { displayText: '𝐌ΞИ𝐔 𝐋𝐎𝐆𝐇𝐈 🎨' }, type: 1 }, ]    
+{ buttonId: `${usedPrefix}attiva`, buttonText: { displayText: '𝐀𝐓𝐓𝐈𝐕𝐀/𝐃𝐈𝐒𝐀𝐓𝐓𝐈𝐕𝐀 🔧' }, type: 1 }, 
+{ buttonId: `${usedPrefix}menuloghi`, buttonText: { displayText: '𝐋𝐎𝐆𝐇𝐈 🎨' }, type: 1 },
+{ buttonId: `${usedPrefix}installa`, buttonText: { displayText: '𝐈𝐍𝐒𝐓𝐀𝐋𝐋𝐀𝐑𝐄 𝐈𝐋 𝐁𝐎𝐓 ⚙️' }, type: 1 },
+ 
+]    
 let texto1 = `┌──⭓ ✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧
 │⭔ ${usedPrefix}kick / addio / ban @
 │⭔ ${usedPrefix}warn @
@@ -12,17 +15,6 @@ let texto1 = `┌──⭓ ✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧
 │⭔ ${usedPrefix}del (msg)
 │⭔ ${usedPrefix}stermina +92
 │⭔ ${usedPrefix}listanum +1
-│⭔ ${usedPrefix}attiva/disabilita benvenuto
-│⭔ ${usedPrefix}attiva/disabilita antilink
-│⭔ ${usedPrefix}attiva/disabilita antilinkhard
-│⭔ ${usedPrefix}attiva/disabilita antispam
-│⭔ ${usedPrefix}attiva/disabilita detect
-│⭔ ${usedPrefix}attiva/disabilita antielimina
-│⭔ ${usedPrefix}attiva/disabilita antiviewonce
-│⭔ ${usedPrefix}attiva/disabilita antitrava
-│⭔ ${usedPrefix}attiva/disabilita antipaki
-│⭔ ${usedPrefix}attiva/disabilita modoadmin
-│⭔ ${usedPrefix}attiva/disabilita autosticker
 │⭔ ${usedPrefix}link
 │⭔ ${usedPrefix}reimposta
 │⭔ ${usedPrefix}hidetag (txt)

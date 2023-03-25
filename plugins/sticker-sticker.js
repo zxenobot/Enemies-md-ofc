@@ -9,7 +9,7 @@ try {
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/webp|image|video/g.test(mime)) {
-if (/video/g.test(mime)) if ((q.msg || q).seconds > 20) return
+if (/video/g.test(mime)) if ((q.msg || q).seconds > 9) return
 m.reply('𝐯𝐢𝐝𝐞𝐨 𝐭𝐫𝐨𝐩𝐩𝐨 𝐥𝐮𝐧𝐠𝐨 ✗')
 let img = await q.download?.()
 

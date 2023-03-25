@@ -21,9 +21,9 @@ const isAntiLink5 = isLink5.exec(m.text)
 const isAntiLink6 = isLink6.exec(m.text)
 const play1 = `ytmp3`
 const play2 = `ytmp4`
-const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (chat.antilinkbase2 && isAntiLink1 && !isAdmin && isBotAdmin) {
 if (isBotAdmin) {
+const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(play1)) return
 if (m.text.includes(play2)) return
 if (m.text.includes(linkThisGroup)) return !0
@@ -40,6 +40,7 @@ m.reply(`⚠️ 𝐍𝐎𝐍 𝐄̀ 𝐂𝐎𝐍𝐒𝐄𝐍𝐓𝐈𝐓𝐎 �
 }}
 if (chat.antilinkbase2 && isAntiLink2 && !isAdmin && isBotAdmin) {
 if (isBotAdmin) {
+const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 global.db.data.users[m.sender].warn += 1
 await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
@@ -54,6 +55,7 @@ m.reply(`⚠️ 𝐍𝐎𝐍 𝐄̀ 𝐂𝐎𝐍𝐒𝐄𝐍𝐓𝐈𝐓𝐎 �
 }}
 if (chat.antilinkbase2 && isAntiLink3 && !isAdmin && isBotAdmin) {
 if (isBotAdmin) {
+const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 global.db.data.users[m.sender].warn += 1
 await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
@@ -68,6 +70,7 @@ m.reply(`⚠️ 𝐍𝐎𝐍 𝐄̀ 𝐂𝐎𝐍𝐒𝐄𝐍𝐓𝐈𝐓𝐎 �
 }}
 if (chat.antilinkbase2 && isAntiLink4 && !isAdmin && isBotAdmin) {
 if (isBotAdmin) {
+const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 global.db.data.users[m.sender].warn += 1
 await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
@@ -82,6 +85,7 @@ m.reply(`⚠️ 𝐍𝐎𝐍 𝐄̀ 𝐂𝐎𝐍𝐒𝐄𝐍𝐓𝐈𝐓𝐎 �
 }}
 if (chat.antilinkbase2 && isAntiLink5 && !isAdmin && isBotAdmin) {
 if (isBotAdmin) {
+const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 global.db.data.users[m.sender].warn += 1
 await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
@@ -96,6 +100,7 @@ m.reply(`⚠️ 𝐍𝐎𝐍 𝐄̀ 𝐂𝐎𝐍𝐒𝐄𝐍𝐓𝐈𝐓𝐎 �
 }}
 if (chat.antilinkbase2 && isAntiLink6 && !isAdmin && isBotAdmin) {
 if (isBotAdmin) {
+const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(play1)) return
 if (m.text.includes(play2)) return
 if (m.text.includes(linkThisGroup)) return !0

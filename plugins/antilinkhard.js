@@ -20,11 +20,11 @@ const isAntiLink4 = isLink4.exec(m.text)
 const isAntiLink5 = isLink5.exec(m.text)
 const play1 = `ytmp3`
 const play2 = `ytmp4`
-const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
     
 if (chat.antiLink && isAntiLink1 && !isAdmin) {
 if (m.text.includes(play1)) return
 if (m.text.includes(play2)) return
+const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 if (isBotAdmin && bot.restrict) {
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -34,6 +34,7 @@ if (responseb[0].status === "404") return
 }
 
 if (chat.antiLink && isAntiLink2 && !isAdmin) {
+const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 if (isBotAdmin && bot.restrict) {
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -43,6 +44,7 @@ if (responseb[0].status === "404") return
 }
 
 if (chat.antiLink && isAntiLink3 && !isAdmin) {
+const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 if (isBotAdmin && bot.restrict) {
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -52,6 +54,7 @@ if (responseb[0].status === "404") return
 }
 
 if (chat.antiLink && isAntiLink4 && !isAdmin) {
+const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 if (isBotAdmin && bot.restrict) {
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -61,6 +64,7 @@ if (responseb[0].status === "404") return
 }
 
 if (chat.antiLink && isAntiLink5 && !isAdmin) {
+const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 if (isBotAdmin && bot.restrict) {
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
