@@ -15,13 +15,14 @@ rows: [
 {title: "𝐦𝐨𝐝𝐨𝐚𝐝𝐦𝐢𝐧", description: null, rowId: `${usedPrefix}modoadmin`},
 {title: "𝐚𝐮𝐭𝐨𝐬𝐭𝐢𝐜𝐤𝐞𝐫", description: null, rowId: `${usedPrefix}autosticker`},
 ]}, ]
-//let name = await conn.getName(m.sender)
+let name = await conn.getName(m.sender)
+let frocioni = `Admin ${name}`
 const listMessage = {
 text: '\n𝐀𝐓𝐓𝐈𝐕𝐀/𝐃𝐈𝐒𝐀𝐓𝐓𝐈𝐕𝐀',
 footer: null,
 title: null,
-buttonText: " ",
-sections }
+buttonText: frocioni,
+sections}
 
 let isEnable = /true|Enable|attiva|(turn)?on|1/i.test(command)
 let chat = global.db.data.chats[m.chat]
@@ -218,8 +219,9 @@ throw false
 chat.antiArab = isEnable  
 break
 default:
-if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, listMessage)
-throw false
+if (!/[01]/.test(command)) {
+if (isAdmin) return conn.sendMessage(m.chat, listMessage, m)
+throw false }
 }
 conn.sendButton(m.chat, `${type} ${isEnable ? '✓ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}`, wm2, null, [[`${isEnable ? '𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚' : '𝐚𝐭𝐭𝐢𝐯𝐚'}`, `${isEnable ? `${usedPrefix}0 ${type}` : `${usedPrefix}1 ${type}`}`]], m)}
 handler.help = ['frocio', 'gay'].map(v => v + '<option>')
