@@ -3,8 +3,8 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, command, text, usedPrefix, isAdmin }) => {
 try {
 const buttons = [
-{ buttonId: `${usedPrefix}1 ${command}`, buttonText: { displayText: 'attiva' }, type: 1 },
-{ buttonId: `${usedPrefix}0 ${command}`, buttonText: { displayText: 'disattiva' }, type: 2 }, ]    
+{ buttonId: `${usedPrefix}1 ${command}`, buttonText: { displayText: '𝐚𝐭𝐭𝐢𝐯𝐚' }, type: 1 },
+{ buttonId: `${usedPrefix}0 ${command}`, buttonText: { displayText: '𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚' }, type: 2 }, ]    
 let texto1 = `𝐎𝐩𝐳𝐢𝐨𝐧𝐞 ⭔ ${command}`
 const buttonMessage = { text: texto1, footer: '𝐄ИΞM𝕀Ξ𝐒 𝐁Ꮻ𝐓', buttons: buttons, headerType: 4 }
 if (!isAdmin) return

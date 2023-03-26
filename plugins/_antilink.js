@@ -16,8 +16,8 @@ const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.
 if (m.text.includes(linkThisGroup)) return !0
 }    
 if (isBotAdmin && bot.restrict) {
-await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
-let responseb = await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+let responseb = await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 if (responseb[0].status === "404") return   
 } else if (!bot.restrict) return
 }
