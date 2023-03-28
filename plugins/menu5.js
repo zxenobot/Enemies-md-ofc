@@ -74,16 +74,6 @@ let texto1 = `┌──⭓ ✧ 𝐌ΞИ𝐔🛡️⃟🏴‍☠ 𝐁Ꮻ𝐓 ✧
 │⭔ ${usedPrefix}topnazi
 │⭔ ${usedPrefix}slot
 │⭔ ${usedPrefix}calc (1+1)
-│⭔ ${usedPrefix}abdul
-│⭔ ${usedPrefix}drix
-│⭔ ${usedPrefix}roax
-│⭔ ${usedPrefix}poison
-│⭔ ${usedPrefix}maschere
-│⭔ ${usedPrefix}polter
-│⭔ ${usedPrefix}fidcat
-│⭔ ${usedPrefix}giada
-│⭔ ${usedPrefix}meli
-│⭔ ${usedPrefix}autoadmin
 │⭔ ${usedPrefix}attiva/disabilita restrict
 │⭔ ${usedPrefix}attiva/disabilita antiprivato
 │⭔ ${usedPrefix}attiva/disabilita sologruppo
