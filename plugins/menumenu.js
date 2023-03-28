@@ -114,16 +114,6 @@ let info = `
 │⭔ ${usedPrefix}topnazi
 │⭔ ${usedPrefix}slot
 │⭔ ${usedPrefix}calc (1+1)
-│⭔ ${usedPrefix}abdul
-│⭔ ${usedPrefix}drix
-│⭔ ${usedPrefix}roax
-│⭔ ${usedPrefix}poison
-│⭔ ${usedPrefix}maschere
-│⭔ ${usedPrefix}polter
-│⭔ ${usedPrefix}fidcat
-│⭔ ${usedPrefix}giada
-│⭔ ${usedPrefix}meli
-│⭔ ${usedPrefix}autoadmin
 └───────⭓
 
 🛡️⃟🏴‍☠ ════ •⊰❂⊱• ════ 🛡️⃟🏴‍☠
