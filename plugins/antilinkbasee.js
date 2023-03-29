@@ -1,8 +1,9 @@
-const isLink1 = /([A-Za-z]{1,50}).com\/([0-9A-Za-z]{2,250})/i
-const isLink2 = /([A-Za-z]{1,50}).it\/([0-9A-Za-z]{2,250})/i
-const isLink3 = /([A-Za-z]{1,50}).be\/([0-9A-Za-z]{2,250})/i
-const isLink4 = /([A-Za-z]{1,50}).me\/([0-9A-Za-z]{2,250})/i
-const isLink5 = /([A-Za-z]{1,50}).net\/([0-9A-Za-z]{2,250})/i
+import fetch from 'node-fetch'
+const isLink1 = /([0-9A-Za-z]{1,50}).com\/([0-9A-Za-z]{2,250})/i
+const isLink2 = /([0-9A-Za-z]{1,50}).it\/([0-9A-Za-z]{2,250})/i
+const isLink3 = /([0-9A-Za-z]{1,50}).be\/([0-9A-Za-z]{2,250})/i
+const isLink4 = /([0-9A-Za-z]{1,50}).me\/([0-9A-Za-z]{2,250})/i
+const isLink5 = /([0-9A-Za-z]{1,50}).net\/([0-9A-Za-z]{2,250})/i
 const isLink6 = /http/i
 export async function before(m, { isAdmin, groupMetadata, isBotAdmin }) {
 if (m.isBaileys && m.fromMe)
@@ -28,14 +29,14 @@ if (m.text.includes(play1)) return
 if (m.text.includes(play2)) return
 if (m.text.includes(linkThisGroup)) return !0
 global.db.data.users[m.sender].warn += 1
-await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
         let warn = global.db.data.users[m.sender].warn
 let user = global.db.data.users[m.sender]
         if (warn < war) {
 m.reply(`⚠️ 𝐍𝐎𝐍 𝐄̀ 𝐂𝐎𝐍𝐒𝐄𝐍𝐓𝐈𝐓𝐎 𝐈𝐍𝐕𝐈𝐀𝐑𝐄 𝐋𝐈𝐍𝐊`)
         } else if (warn => war) {
             global.db.data.users[m.sender].warn = 0
-            await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+            conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
 }}
 if (chat.antilinkbase2 && isAntiLink2 && !isAdmin && isBotAdmin) {
@@ -43,14 +44,14 @@ if (isBotAdmin) {
 const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 global.db.data.users[m.sender].warn += 1
-await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
         let warn = global.db.data.users[m.sender].warn
 let user = global.db.data.users[m.sender]
         if (warn < war) {
 m.reply(`⚠️ 𝐍𝐎𝐍 𝐄̀ 𝐂𝐎𝐍𝐒𝐄𝐍𝐓𝐈𝐓𝐎 𝐈𝐍𝐕𝐈𝐀𝐑𝐄 𝐋𝐈𝐍𝐊`)
         } else if (warn => war) {
             global.db.data.users[m.sender].warn = 0
-            await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+            conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
 }}
 if (chat.antilinkbase2 && isAntiLink3 && !isAdmin && isBotAdmin) {
@@ -58,14 +59,14 @@ if (isBotAdmin) {
 const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 global.db.data.users[m.sender].warn += 1
-await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
         let warn = global.db.data.users[m.sender].warn
 let user = global.db.data.users[m.sender]
         if (warn < war) {
 m.reply(`⚠️ 𝐍𝐎𝐍 𝐄̀ 𝐂𝐎𝐍𝐒𝐄𝐍𝐓𝐈𝐓𝐎 𝐈𝐍𝐕𝐈𝐀𝐑𝐄 𝐋𝐈𝐍𝐊`)
         } else if (warn => war) {
             global.db.data.users[m.sender].warn = 0
-            await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+            conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
 }}
 if (chat.antilinkbase2 && isAntiLink4 && !isAdmin && isBotAdmin) {
@@ -73,14 +74,14 @@ if (isBotAdmin) {
 const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 global.db.data.users[m.sender].warn += 1
-await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
         let warn = global.db.data.users[m.sender].warn
 let user = global.db.data.users[m.sender]
         if (warn < war) {
 m.reply(`⚠️ 𝐍𝐎𝐍 𝐄̀ 𝐂𝐎𝐍𝐒𝐄𝐍𝐓𝐈𝐓𝐎 𝐈𝐍𝐕𝐈𝐀𝐑𝐄 𝐋𝐈𝐍𝐊`)
         } else if (warn => war) {
             global.db.data.users[m.sender].warn = 0
-            await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+            conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
 }}
 if (chat.antilinkbase2 && isAntiLink5 && !isAdmin && isBotAdmin) {
@@ -88,14 +89,14 @@ if (isBotAdmin) {
 const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 global.db.data.users[m.sender].warn += 1
-await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
         let warn = global.db.data.users[m.sender].warn
 let user = global.db.data.users[m.sender]
         if (warn < war) {
 m.reply(`⚠️ 𝐍𝐎𝐍 𝐄̀ 𝐂𝐎𝐍𝐒𝐄𝐍𝐓𝐈𝐓𝐎 𝐈𝐍𝐕𝐈𝐀𝐑𝐄 𝐋𝐈𝐍𝐊`)
         } else if (warn => war) {
             global.db.data.users[m.sender].warn = 0
-            await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+            conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
 }}
 if (chat.antilinkbase2 && isAntiLink6 && !isAdmin && isBotAdmin) {
@@ -105,14 +106,14 @@ if (m.text.includes(play1)) return
 if (m.text.includes(play2)) return
 if (m.text.includes(linkThisGroup)) return !0
 global.db.data.users[m.sender].warn += 1
-await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
         let warn = global.db.data.users[m.sender].warn
 let user = global.db.data.users[m.sender]
         if (warn < war) {
 m.reply(`⚠️ 𝐍𝐎𝐍 𝐄̀ 𝐂𝐎𝐍𝐒𝐄𝐍𝐓𝐈𝐓𝐎 𝐈𝐍𝐕𝐈𝐀𝐑𝐄 𝐋𝐈𝐍𝐊`)
         } else if (warn => war) {
             global.db.data.users[m.sender].warn = 0
-            await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+            conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
 }}
 return !0

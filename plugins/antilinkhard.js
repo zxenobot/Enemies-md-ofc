@@ -1,9 +1,9 @@
 import fetch from 'node-fetch'
-const isLink1 = /([A-Za-z]{1,50}).com\/([0-9A-Za-z]{2,250})/i
-const isLink2 = /([A-Za-z]{1,50}).it\/([0-9A-Za-z]{2,250})/i
-const isLink3 = /([A-Za-z]{1,50}).be\/([0-9A-Za-z]{2,250})/i
-const isLink4 = /([A-Za-z]{1,50}).me\/([0-9A-Za-z]{2,250})/i
-const isLink5 = /([A-Za-z]{1,50}).net\/([0-9A-Za-z]{2,250})/i
+const isLink1 = /([0-9A-Za-z]{1,50}).com\/([0-9A-Za-z]{2,250})/i
+const isLink2 = /([0-9A-Za-z]{1,50}).it\/([0-9A-Za-z]{2,250})/i
+const isLink3 = /([0-9A-Za-z]{1,50}).be\/([0-9A-Za-z]{2,250})/i
+const isLink4 = /([0-9A-Za-z]{1,50}).me\/([0-9A-Za-z]{2,250})/i
+const isLink5 = /([0-9A-Za-z]{1,50}).net\/([0-9A-Za-z]{2,250})/i
 const isLink6 = /http/i
 
 export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBotAdmin }) {
@@ -29,8 +29,8 @@ if (m.text.includes(play2)) return
 const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 if (isBotAdmin && bot.restrict) {
-await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-let responseb = await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+let responseb = conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 if (responseb[0].status === "404") return   
 } else if (!bot.restrict) return 
 }
@@ -39,8 +39,8 @@ if (chat.antiLink && isAntiLink2 && !isAdmin) {
 const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 if (isBotAdmin && bot.restrict) {
-await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-let responseb = await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+let responseb = conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 if (responseb[0].status === "404") return   
 } else if (!bot.restrict) return 
 }
@@ -49,8 +49,8 @@ if (chat.antiLink && isAntiLink3 && !isAdmin) {
 const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 if (isBotAdmin && bot.restrict) {
-await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-let responseb = await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+let responseb = conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 if (responseb[0].status === "404") return   
 } else if (!bot.restrict) return 
 }
@@ -59,8 +59,8 @@ if (chat.antiLink && isAntiLink4 && !isAdmin) {
 const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 if (isBotAdmin && bot.restrict) {
-await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-let responseb = await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+let responseb = conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 if (responseb[0].status === "404") return   
 } else if (!bot.restrict) return 
 }
@@ -69,8 +69,8 @@ if (chat.antiLink && isAntiLink5 && !isAdmin) {
 const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 if (isBotAdmin && bot.restrict) {
-await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-let responseb = await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+let responseb = conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 if (responseb[0].status === "404") return   
 } else if (!bot.restrict) return 
 }
@@ -81,8 +81,8 @@ if (m.text.includes(play2)) return
 const linkThisGroup = `chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 if (isBotAdmin && bot.restrict) {
-await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-let responseb = await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+let responseb = conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 if (responseb[0].status === "404") return   
 } else if (!bot.restrict) return 
 }

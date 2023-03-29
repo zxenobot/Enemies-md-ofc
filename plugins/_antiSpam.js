@@ -1,4 +1,3 @@
-
 let handler = m => m
 handler.before = async function (m, {conn, isAdmin, isBotAdmin, isOwner, isROwner} ) {  
 if (!m.isGroup) return !1
@@ -33,9 +32,8 @@ if (!chat.antiSpam) return
 if (new Date - user.antispam < tiempo * 1) return
 if (isBotAdmin && chat.antiSpam && !isAdmin && !isOwner && !isROwner && bot.restrict) {
 await conn.reply(m.chat, texto,  m, { mentions: this.parseMention(texto) })
-user.banned = true
 
-await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 user.antispam = new Date * 1  
   
 } else {
