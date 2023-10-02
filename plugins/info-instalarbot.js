@@ -19,12 +19,7 @@ let text = `
 > npm update
 > npm start
 `.trim()   
-conn.reply(m.chat, text, m, {
-contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
-title: 'bot',
-body: 'bot',         
-previewType: 0, thumbnail: fs.readFileSync("./Menu2.jpg"),
-sourceUrl: `https://github.com/unlimited787/Enemies-md-ofc`}}})   
+conn.reply(m.chat, text, m)   
 }
 handler.command = /^(installa)/i
 export default handler

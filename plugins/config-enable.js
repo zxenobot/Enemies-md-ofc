@@ -223,7 +223,9 @@ if (!/[01]/.test(command)) {
 if (isAdmin) return conn.sendMessage(m.chat, listMessage, m)
 throw false }
 }
-conn.sendButton(m.chat, `${type} ${isEnable ? '✓ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}`, wm2, null, [[`${isEnable ? '𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚' : '𝐚𝐭𝐭𝐢𝐯𝐚'}`, `${isEnable ? `${usedPrefix}0 ${type}` : `${usedPrefix}1 ${type}`}`]], m)}
+let info = `${type} ${isEnable ? '✓ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}
+`.trim() 
+conn.reply(m.chat, info, m)}
 handler.help = ['frocio', 'gay'].map(v => v + '<option>')
 handler.tags = ['group', 'owner']
 handler.command = /^((on|off)|(attiva|disabilita)|(turn)?[01])$/i

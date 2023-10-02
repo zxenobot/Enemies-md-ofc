@@ -9,7 +9,7 @@ switch (type) {
 	case 'loli':
 	if (!text) return
 	let img = global.API('fgmods', '/api/lolimaker', { text }, 'apikey')
-	conn.sendFile(m.chat, img, 'logo.png', null, m)
+	conn.sendFile(m.chat, img, 'logo.jpg', null, m)
 	break 
 	case 'neon': 
 	if (!text) return

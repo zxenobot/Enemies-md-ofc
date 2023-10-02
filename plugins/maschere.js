@@ -1,7 +1,7 @@
 import os from 'os'
 import util from 'util'
 import sizeFormatter from 'human-readable'
-import MessageType from '@adiwajshing/baileys'
+import MessageType from '@whiskeysockets/baileys'
 import fs from 'fs'
 import { performance } from 'perf_hooks'
 let handler = async (m, { conn, usedPrefix }) => {
@@ -19,12 +19,7 @@ let neww = performance.now()
 let speed = neww - old
 let info = `
 ʍɑՏϲհҽɾҽ ➁ↂ❶❷ 🎭➁ↂ❷➁ “ꜱɪᴀᴍᴏ ᴍᴀꜱᴄʜᴇʀᴇ ᴇ ᴘᴇʀ ʟᴀ ᴠɪᴛᴀ ʀᴇᴄɪᴛɪᴀᴍᴏ... ꜰɪɴᴛᴀɴᴛᴏᴄʜᴇ ɪ ᴘᴀᴋɪsᴛᴀɴɪ ʟᴏ ᴘᴇʀᴍᴇᴛᴛᴏɴᴏ.”`.trim() 
-conn.reply(m.chat, info, m, {
-contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
-title: '𝙸𝙽𝙵𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃',
-body: 'ᴛʜᴇ ᴍʏsᴛɪᴄ ﹣ ʙᴏᴛ',         
-previewType: 0, thumbnail: fs.readFileSync("./Menu2.jpg"),
-sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`}}})
+conn.reply(m.chat, info, m)
 }
 handler.help = ['maschere']
 handler.tags = ['maschere']
