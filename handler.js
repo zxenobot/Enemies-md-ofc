@@ -1426,30 +1426,24 @@ export async function participantsUpdate({id, participants, action}) {
   switch (action) {
     case 'add':
     case 'remove':
-      if (chat.welcome && !chat?.isBanned) {
-        const groupMetadata = await m.conn.groupMetadata(id) || (conn.chats[id] || {}).metadata;
-        for (const user of participants) {
-          let pp = './src/avatar_contact.png';
-          try {
-            pp = await m.conn.profilePictureUrl(user, 'image');
-          } catch (e) {
-          } finally {
-            const apii = await m.conn.getFile(pp);
-            const userPrefix = antiArab.some((prefix) => user.startsWith(prefix));
-            const botTt2 = groupMetadata.participants.find((u) => m.conn.decodeJid(u.id) == m.conn.user.jid) || {};
-            const isBotAdminNn = botTt2?.admin === 'admin' || false;
-            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Benvenuto, @user!').replace('@subject', await m.conn.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'descrizione') :
-                              (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0]);
-            if (userPrefix && chat.antiArab && botTt.restrict && isBotAdminNn && action === 'add') {
-              const responseb = await m.conn.groupParticipantsUpdate(id, [user], 'remove');
-              if (responseb[0].status === '404') return;
-              return;
+      if (chat.welcome) {
+        let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
+                for (let user of participants) {
+                    let pp = './src/avatar_contact.png'
+                    try {
+                        pp = await this.profilePictureUrl(user, 'image')
+                    } catch (e) {
+                    } finally {
+                    let apii = await this.getFile(pp)
+                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'benvenuto, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'bot') :
+                              (chat.sBye || this.bye || conn.bye || 'bye bye, @user!')).replace('@user', '@' + user.split('@')[0])
+                       
+                
+ this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] }) 
+                   }
+                }
             }
-            await m.conn.sendFile(id, apii.data, 'pp.jpg', text, null, false, {mentions: [user]});
-          }
-        }
-      }
-      break;
+            break;
     case 'promote':
     case 'daradmin':
     case 'darpoder':
