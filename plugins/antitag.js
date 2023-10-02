@@ -6,8 +6,10 @@ let frocio = users.lenght - 1
 let chat = global.db.data.chats[m.chat]
 let delet = m.key.participant
 let bang = m.key.id
-if (isBotAdmin && !isAdmin)
-   if (m.mentionedJid.length >= 20) conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-}
+if (isBotAdmin && !isAdmin) {
+   if (m.mentionedJid.length >= 20) {
+conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
+}}}
 
 export default handler
