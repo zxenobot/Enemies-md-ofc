@@ -14,7 +14,7 @@ const {say} = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
 say('ENEMIES', {
-font: 'huge',
+font: 'block',
 align: 'center',
 gradient: ['blue', 'white']})
 say(`BOT`, {
