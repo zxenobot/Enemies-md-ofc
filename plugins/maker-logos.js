@@ -883,6 +883,6 @@ async function maker(url, text) {
       })
       return {status: c.data?.success, image: server + (c.data?.fullsize_image || c.data?.image || ""), session: c.data?.session_id}
    } catch (e) {
-      throw e
+      return
    }
 }

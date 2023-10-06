@@ -47,6 +47,8 @@ let info = `
 │⭔ ${usedPrefix}viainattivi
 │⭔ ${usedPrefix}promuovi / mettiadmin @
 │⭔ ${usedPrefix}retrocedi / togliadmin @
+│⭔ ${usedPrefix}muta @
+│⭔ ${usedPrefix}smuta @
 │⭔ ${usedPrefix}gruppo aperto / chiuso
 │⭔ ${usedPrefix}aperto / chiuso
 │⭔ ${usedPrefix}nome (txt)
@@ -105,6 +107,7 @@ let info = `
 │⭔ ${usedPrefix}nero @
 │⭔ ${usedPrefix}nera @
 │⭔ ${usedPrefix}random @
+│⭔ ${usedPrefix}abbraccio @
 │⭔ ${usedPrefix}amore @
 │⭔ ${usedPrefix}andre (AI)
 │⭔ ${usedPrefix}wikipedia (txt)
@@ -130,6 +133,7 @@ let info = `
 │⭔ ${usedPrefix}join (link)
 │⭔ ${usedPrefix}out
 │⭔ ${usedPrefix}spegni
+│⭔ ${usedPrefix}fix
 │⭔ ${usedPrefix}creagruppo (nome)
 │⭔ ${usedPrefix}nuke
 │⭔ ${usedPrefix}spamgp (link)

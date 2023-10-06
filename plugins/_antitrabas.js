@@ -10,7 +10,7 @@ export async function before(m, { conn, isAdmin, isBotAdmin, usedPrefix }) {
   let bang = m.key.id
   let name = await conn.getName(m.sender)
   let fakemek = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "51995386439-1616969743@g.us","inviteCode": "m","groupName": "P", "caption": '0', 'jpegThumbnail': null}}}
-   if (chat.antiTraba && m.text.length > 5000) { //.//
+   if (chat.antiTraba && m.text.length > 3000) { //.//
     if (isAdmin) return 
         if (isBotAdmin && bot.restrict) {
         conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
