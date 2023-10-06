@@ -65,6 +65,7 @@ export async function handler(chatUpdate) {
       }
       if (user) {
         if (!isNumber(user.exp)) user.exp = 0;
+if (!('muto' in user)) user.muto = false;
         if (!('premium' in user)) user.premium = false;
         if (!isNumber(user.joincount)) user.joincount = 2;
         if (!isNumber(user.limit)) user.limit = 20;
@@ -498,6 +499,7 @@ export async function handler(chatUpdate) {
         global.db.data.users[m.sender] = {
 		    afk: -1,
 		    wait: 0,
+muto: false,
           afkReason: '',
           age: -1,
           agility: 16,
@@ -1410,7 +1412,6 @@ utente bannato
     if (settingsREAD.autoread2) await mconn.conn.readMessages([m.key]);
   }
 }
-
 /**
  * Handle groups participants update
  * @param {import('@whiskeysockets/baileys').BaileysEventMap<unknown>['group-participants.update']} groupsUpdate
@@ -1437,7 +1438,6 @@ export async function participantsUpdate({id, participants, action}) {
                     let apii = await this.getFile(pp)
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'benvenuto, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'bot') :
                               (chat.sBye || this.bye || conn.bye || 'bye bye, @user!')).replace('@user', '@' + user.split('@')[0])
-                       
                 
  this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] }) 
                    }
