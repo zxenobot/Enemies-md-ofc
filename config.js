@@ -8,20 +8,20 @@ import axios from 'axios';
 import moment from 'moment-timezone';
 
 global.owner = [
-  ['393756447945', '𝐄ИΞM𝕀Ξ𝐒 𝐁Ꮻ𝐓', true],
-  ['377607935810'],
-  ['393756447945'],
-  ['393756447945']
+  ['15082758965', 'Zxeno Bot', true],
+  ['15082758965'],
+  ['15082758965'],
+  ['15082758965']
 ] 
 
-global.suittag = ['393756447945'];
-global.prems = ['393756447945'];
+global.suittag = ['15082758965'];
+global.prems = ['15082758965'];
 
 
-global.packname = '𝐄ИΞM𝕀Ξ𝐒'
-global.author = '𝐁Ꮻ𝐓'
-global.wm = '𝐄ИΞM𝕀Ξ𝐒 𝐁Ꮻ𝐓'
-global.igfg = '𝐄ИΞM𝕀Ξ𝐒 𝐁Ꮻ𝐓'
+global.packname = 'Zxeno'
+global.author = 'bot'
+global.wm = 'Zxeno bot'
+global.igfg = 'Zxeno bot'
 global.wait = 'ok'
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
@@ -42,15 +42,15 @@ global.mes = d.toLocaleDateString('es', {month: 'long'});
 global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
-global.wm2 = `𝐄ИΞM𝕀Ξ𝐒 🛡️⃟🏴‍☠️ 𝐁Ꮻ𝐓`;
-global.gt = '𝐄ИΞM𝕀Ξ𝐒 🛡️⃟🏴‍☠️ 𝐁Ꮻ𝐓';
-global.mysticbot = '𝐄ИΞM𝕀Ξ𝐒 🛡️⃟🏴‍☠️ 𝐁Ꮻ𝐓';
+global.wm2 = `Zxeno bot`;
+global.gt = 'Zxeno bot';
+global.mysticbot = 'Zxeno bot';
 global.md = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
 global.mysticbot = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
 global.waitt = 'ok'
 global.waittt = 'ok'
 global.waitttt = 'ok'
-global.nomorown = '393756447945'
+global.nomorown = '15082758965'
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
